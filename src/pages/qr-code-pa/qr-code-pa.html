@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-navbar color="dark">
+    <ion-title>QRCodePa</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding id="qrpa">
+    <h2>QR CODE Student</h2>
+    <ion-card *ngFor="let item of QrImageArray">
+      <ion-item>
+          <p>{{item.student_title}} {{item.student_name}} {{item.student_surname}} </p>
+          <p>{{item.card_id}}</p>
+          <img src="http://192.168.43.75/beerprojectv2/userQr/{{item.qrImg}}"> 
+      </ion-item>
+    </ion-card>
+</ion-content>

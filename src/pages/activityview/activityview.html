@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-navbar color="dark">
+    <ion-title>activityview</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding id="activity">
+  
+  <ion-card *ngFor="let item of activityArray">
+    <ion-item>
+      <h2></h2>
+      <h2>{{item.activity_id}}</h2>
+      <!--//ใช้ item อ้างและ . ชื่อ attibute -->
+      <p>ชื่อกิจกรรม : {{item.activity_name}}</p>
+      <p>รายละเอียดกิจกรรม : {{item.activity_description}}</p>
+      <p>วันที่จัดกิจกรรม : {{item.activity_date}}</p>
+      <p>ภาคการศึกษา : {{item.term_num}}/{{item.term_years}}</p>
+    </ion-item>
+  </ion-card>
+
+  
+</ion-content>

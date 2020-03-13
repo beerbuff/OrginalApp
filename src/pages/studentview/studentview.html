@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar color="dark">
+    <ion-title>Studentview</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding id="student">
+  
+  <ion-card *ngFor="let item of studentArray" >
+    <ion-item>
+          <h2></h2>
+          <h2>{{item.student_title}}{{item.student_name}}
+            {{item.student_surname}}</h2>
+          <!--//ใช้ item อ้างและ . ชื่อ attibute -->
+          <p>รหัสบัตรประชาชน : {{item.card_id}}</p>
+          <p>อายุ : {{item.student_age}}</p>
+          <p>ผู้ปกครอง : {{item.qrUsername}}{{item.qrSurname}}</p>
+    </ion-item>
+  </ion-card>
+
+</ion-content>

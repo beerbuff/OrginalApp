@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-navbar color="dark">
+    <ion-title>Menuteacher Grade 3</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding id="menuteacherthree">
+  <ion-list>
+      <ion-item id="menuteacherthree" (click)="QrScanthree()">
+        <ion-thumbnail item-start>
+          <img src="assets/imgs/qr-code.png">
+        </ion-thumbnail>
+          <h2>Scan QR Code Grade 3</h2>
+          <p>สแกนการมาเรียน อนุบาล3</p>
+        <button ion-button clear item-end>View</button>
+      </ion-item>
+
+      <ion-item id="menuteacherthree" (click)="Checkstudythree()">
+        <ion-thumbnail item-start>
+          <img src="assets/imgs/list.png">
+        </ion-thumbnail>
+          <h2>Check Class Grade 3</h2>
+          <p>เช็คชื่อเข้าห้องเรียน อนุบาล3</p>
+        <button ion-button clear item-end>View</button>
+      </ion-item>
+
+
+      <ion-item id="menuteacherthree" (click)="SaveSickthree()">
+        <ion-thumbnail item-start>
+          <img src="assets/imgs/patient.png">
+        </ion-thumbnail>
+          <h2>Save Sick Grade 3</h2>
+          <p>บันทึกรายการเด็กป่วย อนุบาล3</p>
+        <button ion-button clear item-end (click)="SaveSick()">View</button>
+      </ion-item>
+
+
+      <ion-item id="menuteacherthree" (click)="Studentviewthree()">
+        <ion-thumbnail item-start>
+          <img src="assets/imgs/student.png">
+        </ion-thumbnail>
+          <h2>Student Grade 3</h2>
+          <p>ข้อมูลเด็ก อนุบาล3</p>
+        <button ion-button clear item-end>View</button>
+      </ion-item>
+
+
+  </ion-list>
+
+  <button ion-button block (click)="clearst()">Logout</button>
+
+
+</ion-content>

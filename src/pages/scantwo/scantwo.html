@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-navbar color="dark">
+    <ion-title>
+      Qr Scan Grade 2
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding id="qrscan2">
+ 
+  <button ion-button block (click)="barcode()">Scan QR Code</button>
+
+    <ion-card>
+      <ion-card-header>
+        Card id
+      </ion-card-header>
+      <ion-card-content>
+        {{card_id}}
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card *ngFor="let student of studentArray">
+      <ion-item>
+        {{student.student_name}}
+        {{student.student_surname}}
+      </ion-item>
+    </ion-card>
+
+  
+    <ion-item>
+      <ion-label>ปีการศึกษา</ion-label>
+      <ion-select multiple="true" (ionChange)="showt($event)" >
+        <ion-option *ngFor="let item of term ; let i = index"value="{{item.term_id}}" >{{item.term_num}}/
+          {{item.term_years}}</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-card>
+      <ion-card-content>
+        <ion-label>Date</ion-label>
+        {{date}}
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-content>
+        <ion-label>Time</ion-label>
+        {{time}}
+      </ion-card-content>
+    </ion-card>
+
+    <ion-label class="my-label" (click)="remind()">กรณีลืมบัตรและโทรศัพท์</ion-label>
+  <br>
+  <br>
+    <button ion-button round (click)="postJsonData()">บันทึก</button>
+</ion-content>

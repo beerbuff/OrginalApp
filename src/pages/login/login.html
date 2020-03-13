@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar color="dark">
+   <ion-title>Login Teacher</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding id="login">
+        <ion-item>
+          <ion-label floating>Card-Id</ion-label>
+          <ion-input type="text" [(ngModel)]="username"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label floating>Password</ion-label>
+          <ion-input type="password" [(ngModel)]="password"></ion-input>
+        </ion-item>
+
+        <button ion-button block (click)=" Testlog(username,password)">
+            <ion-icon name="log-in"></ion-icon> &nbsp; &nbsp; SIGN IN
+        </button>
+        <h3>{{loginResult}}</h3>
+
+</ion-content>

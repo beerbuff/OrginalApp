@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-navbar color="dark">
+  <ion-title>Menuparent</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding id="menuparent">
+  <ion-list>
+      <ion-item id="menuparent" (click)="Qrview()">
+        <ion-thumbnail item-start>
+          <img src="assets/imgs/qr-code-pa.png"/>
+        </ion-thumbnail>
+          <h2>QR Code</h2>
+          <p>Scan การมารับ-ส่ง</p>
+        <button ion-button clear item-end>View</button>
+      </ion-item>
+
+      <ion-item id="menuparent" (click)="activityView()">
+          <ion-thumbnail item-start>
+            <img src="assets/imgs/trip.png"/>
+          </ion-thumbnail>
+            <h2>Activity</h2>
+            <p>เรียกดูข้อมูลกิจกรรม</p>
+          <button ion-button clear item-end>View</button>
+      </ion-item>
+
+        
+      <ion-item id="menuparent" (click)="Bmiview()">
+        <ion-thumbnail item-start>
+          <img src="assets/imgs/arm.png">
+        </ion-thumbnail>
+          <h2>BMI</h2>
+          <p>เรียกดูดัชนีมวลกาย</p>
+        <button ion-button clear item-end>View</button>
+      </ion-item>
+
+
+      <ion-item id="menuparent" (click)="testleave()">
+        <ion-thumbnail item-start>
+          <img src="assets/imgs/patient.png">
+        </ion-thumbnail>
+          <h2>Leave</h2>
+          <p>ลาป่วย</p>
+        <button ion-button clear item-end>View</button>
+      </ion-item>
+
+      <button ion-button block (click)="logout()">Logout</button>
+
+  </ion-list>
+</ion-content>

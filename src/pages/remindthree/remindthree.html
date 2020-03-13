@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-navbar color="dark">
+    <ion-title>Remindcard</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding id="remindcard3">
+
+  <ion-item>
+    <ion-label>เลือกนักเรียน</ion-label>
+    <ion-select multiple="true" (ionChange)="show($event)">
+      <ion-option *ngFor="let item of student ; let i = index" value="{{item.card_id}}">{{item.student_name}}{{item.student_surname}}</ion-option>
+    </ion-select>
+  </ion-item>
+
+
+  <ion-item>
+    <ion-label>ปีการศึกษา</ion-label>
+    <ion-select [(ngModel)]="term_id" multiple="true">
+      <ion-option *ngFor="let term of term" value="{{term.term_id}}">{{term.term_num}}/{{term.term_years}}</ion-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-card>
+    <ion-card-content>
+      <ion-label>Date</ion-label>
+      {{date}}
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-content>
+      <ion-label>Time</ion-label>
+      {{time}}
+    </ion-card-content>
+  </ion-card>
+  <button ion-button round (click)="postJsonData( term_id, date,time)">บันทึก</button>
+
+
+</ion-content>

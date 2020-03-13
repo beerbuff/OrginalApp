@@ -1,0 +1,59 @@
+page-save-sickthree {
+    #savesick{
+        background: color($colors ,energy);
+       
+        .marginTop{
+            margin-top: 80px;
+        }
+    }
+  ion-icon.icon.icon-md.ion-md-contact::before{
+        padding: 30px;
+
+    }
+    ion-avatar{
+        padding: 5px;
+        font-size: 20px;
+    }
+    ion-navbar.toolbar.toolbar-md.toolbar-md-danger{
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+    ion-label.label.label-md{
+        margin-left: 8px;
+        margin-right: 8px;
+        margin-top: 13px;
+        margin-bottom: 13px;
+        padding: 15px;
+    }
+    div.input-wrapper{
+        padding-top: 0px;
+        padding-bottom: 0px;
+        width: 250px;
+        height: 50px;
+    }
+    ion-input.input.input-md{
+        padding: 2px;
+    }
+    ion-col.col{
+        padding: 2px;
+    }
+    col-12{
+        padding: 2px;
+    }
+    .item-md {
+        padding-left: 2px;
+        padding-right: 0px;
+        position: relative;
+        font-size: 1.6rem;
+        font-weight: normal;
+        text-transform: none;
+        color: rgb(0, 0, 0);
+        background-color: rgb(255, 255, 255);
+        box-shadow: none;
+        transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
+    }
+    button.button.button-md.button-default.button-default-md{
+        padding-right: 50px;
+        padding-left: 50px; 
+    }
+}

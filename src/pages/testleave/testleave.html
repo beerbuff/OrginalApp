@@ -1,0 +1,60 @@
+
+<ion-header>
+  <ion-navbar color="dark">
+    <ion-title>leave Sick</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding id="testleave">
+  
+    <ion-item>
+      <ion-label>เลือกเด็ก</ion-label>
+      <ion-select multiple="true" (ionChange)="show($event)">
+        <ion-option *ngFor="let st of studentArrays ; let i = index"value="{{st.student_id}}">{{st.student_name}} 
+          {{st.student_surname}}</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>สาเหตุการลาป่วย</ion-label>
+      <ion-input type="text" [(ngModel)]="leave_description" placeholder="กรอกอาการป่วย"></ion-input>
+    </ion-item>
+  
+    
+    <ion-item>
+      <ion-label>วันที่เริ่มลา : </ion-label>
+      <ion-datetime displayFormat="DD/MMMM/YYYY" [(ngModel)]="leave_startdate"></ion-datetime>
+    </ion-item>
+  
+    
+ 
+    <ion-item>
+      <ion-label>สิ้นสุดวันลา : </ion-label>
+      <ion-datetime displayFormat="DD/MMMM/YYYY" [(ngModel)]="leave_enddate"></ion-datetime>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label >จำนวนวัน</ion-label>
+      <ion-input type="" [(ngModel)]="days" ></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label>ปีการศึกษา</ion-label>
+      <ion-select [(ngModel)]="term_id" multiple="true" >
+        <ion-option *ngFor="let term of termArrays" value="{{term.term_id}}" >{{term.term_num}}/{{term.term_years}}</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>เลือกครูที่ต้องการส่ง SMS</ion-label>
+      <ion-select multiple="true" (ionChange)="showte($event)" >
+        <ion-option *ngFor="let te of teacherArrays ; let i = index"value="{{te.teacher_number}}" >{{te.teacher_name}} 
+          {{te.teacher_surname}}</ion-option>
+      </ion-select>
+    </ion-item>
+
+
+    <button ion-button block (click)="postJson(leave_description, leave_startdate, leave_enddate, days, term_id)">บันทึก</button>
+
+
+</ion-content>

@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar color="dark">
+   <ion-title>Login Parent</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding id="loginparent">
+   
+    <ion-item>
+      <ion-input type="text" [(ngModel)]="username" placeholder="Username Login"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input type="password" [(ngModel)]="password" placeholder="Password Login"></ion-input>
+    </ion-item>
+
+    <button ion-button block (click)="Testlog(username,password)">
+      <ion-icon name="log-in"></ion-icon> &nbsp; &nbsp; SIGN IN
+    </button>
+
+</ion-content>
